@@ -1,0 +1,127 @@
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, user-scalable=no" />
+	<title>WimyLime - Rhythm Action with YouTube</title>
+
+	<script src="http://www.google.com/jsapi" type="text/javascript"></script>
+	<script src="util.js" type="text/javascript"></script>
+	<script src="game_common.js" type="text/javascript"></script>
+	<script src="findImage.js"></script>
+
+	<link href="style.css" rel="stylesheet" type="text/css" />
+
+</head>
+<body id="mainBody" class="whitebackground">
+	<div id="indexmain" class="whitebackground">
+		<div id="main_head">
+			<span class="mainlogo"><a href='/'>WimyLime</a></span>
+			<br /><br />
+			<div id="main_menu">
+				<a href='/'>Home</a>
+				&nbsp;&nbsp;
+				<a href='/startRecord.htm'>Create</a>
+				&nbsp;&nbsp;
+				<a href='/list.htm'>Play</a>
+			</div>
+		</div>
+		<div id="main_inner">
+
+			<div style="width:470px; margin-left:auto; margin-right:auto;">
+				<p>아래의 칸을 채우고 '입력 시작' 버튼을 누르세요
+				</p>
+				<form action="recorder.htm" method="get" onsubmit="return checkForm()">
+				<table width="90%" align="center">
+					<tr>
+						<td><a href='http://www.youtube.com/'>YouTube</a> 비디오 주소 : </td>
+						<td style="height: 50px;">
+							<input type="text" size="45" name="videoURL" id="videoURL" onchange="checkTitle()" required="required" placeholder="YouTube 에서 검색한 동영상의 주소를 입력하세요">
+							<br/>
+							<span id="status">&nbsp;</span>
+						</td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>제작자 : </td>
+						<td><input type="text" size="45" name="author" id="author" required="required" maxlength="20" placeholder="자신의 이름을 입력하세요"></td>
+					</tr>
+					<tr>
+						<script>
+						function checkTitle()
+						{
+							$("status").innerHTML = "비디오 제목 얻어오는 중...";
+							
+							videoid = extractVideoIDFromYouTubeURL($("videoURL").value);
+							
+							request("/getVideoTitle.py?videoid=" + videoid,
+									function(responseJSON)
+									{
+										$("status").innerHTML = responseJSON["title"];
+									}, null);
+							
+							requestBackgroundImage(videoid);
+						}
+						
+						function checkFormAndAlertAndFocus(id, msg)
+						{
+							if ( $(id).value == "" )
+							{
+								alert(msg);
+								$(id).focus();
+								return false;
+							}
+							else
+							{
+								$(id).value = $(id).value.trim();
+							}
+							return true;
+						}
+						function checkForm()
+						{
+							if ( false == checkFormAndAlertAndFocus("videoURL", "비디오 주소를 입력하세요") )
+							{
+								return false;
+							}
+							if ( false == checkFormAndAlertAndFocus("author", "리듬 만든 이를 입력하세요") )
+							{
+								return false;
+							}
+							return true;
+						}
+						</script>
+						<td colspan="2" align="center"><input type="submit" value="입력 시작" size="40" class="fullSizeButton"></td>
+					</tr>
+				</table>
+				<br />
+				ex) http://www.youtube.com/watch?v=3fy4cqWMhyI
+				</form>
+			</div>
+
+		</div>
+	</div>
+	<br />
+	<div id="footer">
+	Made by zelon
+	</div>
+
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-351021-14']);
+  _gaq.push(['_setDomainName', 'wimy.com']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+</body>
+</html>

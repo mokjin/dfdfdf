@@ -1,0 +1,123 @@
+application: wimylime
+version: 2
+runtime: python27
+api_version: 1
+threadsafe: true
+
+handlers:
+- url: /
+  static_files: index.htm
+  upload: index.htm
+
+- url: /recorder.htm
+  static_files: recorder.htm
+  upload: recorder.htm
+
+- url: /test.htm
+  static_files: test.htm
+  upload: test.htm
+
+- url: /list.htm
+  static_files: list.htm
+  upload: list.htm
+
+- url: /player.htm
+  static_files: player.htm
+  upload: player.htm
+
+- url: /player.js
+  static_files: player.js
+  upload: player.js
+
+- url: /startRecord.htm
+  static_files: startRecord.htm
+  upload: startRecord.htm
+
+- url: /getVideoTitle.py
+  script: getVideoTitle.app
+
+- url: /score.py
+  script: score.app
+
+- url: /insertLime.py
+  script: DB.app
+
+- url: /listLime.py
+  script: DB.app
+
+- url: /loadLime.py
+  script: DB.app
+
+- url: /style.css
+  static_files: style.css
+  upload: style.css
+
+- url: /util.js
+  static_files: util.js
+  upload: util.js
+  
+- url: /findImage.js
+  static_files: findImage.js
+  upload: findImage.js
+  
+- url: /youtube.js
+  static_files: youtube.js
+  upload: youtube.js
+
+- url: /recorder.js
+  static_files: recorder.js
+  upload: recorder.js
+
+- url: /player.js
+  static_files: youtube.js
+  upload: youtube.js
+
+- url: /game_common.js
+  static_files: game_common.js
+  upload: game_common.js
+  
+- url: /images/note1.png
+  static_files: images/note1.png
+  upload: images/note1.png
+  
+- url: /images/note2.png
+  static_files: images/note2.png
+  upload: images/note2.png
+  
+- url: /images/note3.png
+  static_files: images/note3.png
+  upload: images/note3.png
+  
+- url: /images/note4.png
+  static_files: images/note4.png
+  upload: images/note4.png
+  
+- url: /images/note1pop.png
+  static_files: images/note1pop.png
+  upload: images/note1pop.png
+  
+- url: /images/note2pop.png
+  static_files: images/note2pop.png
+  upload: images/note2pop.png
+  
+- url: /images/note3pop.png
+  static_files: images/note3pop.png
+  upload: images/note3pop.png
+  
+- url: /images/note4pop.png
+  static_files: images/note4pop.png
+  upload: images/note4pop.png
+
+- url: /images/pop_effect.png
+  static_files: images/pop_effect.png
+  upload: images/pop_effect.png
+
+
+- url: /images/lime.png
+  static_files: images/lime.png
+  upload: images/lime.png
+
+- url: /favicon.ico
+  static_files: images/favicon.ico
+  upload: images/favicon.ico  
+

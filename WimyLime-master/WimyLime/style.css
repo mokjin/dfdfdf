@@ -1,0 +1,359 @@
+
+@import url(http://fonts.googleapis.com/css?family=Share+Tech+Mono);
+@import url(http://fonts.googleapis.com/css?family=Audiowide);
+
+body
+{
+	background-color: #000000;
+	color: white;
+	margin: 0px;
+	padding: 0px;
+	font-family: "맑은 고딕";
+	font-size: 80%;
+}
+
+a
+{
+	text-decoration:none;
+	color: #202020;
+}
+
+hr
+{
+	border: solid #c0c0c0 2px;
+}
+
+#videoDiv
+{
+	height: 300px;
+}
+
+#outer_content
+{
+	width: 480px;
+
+	padding: 0px;
+	
+	margin: 0px;
+	margin-top: 10px;
+	margin-left : auto;
+	margin-right : auto;
+
+	border: 1px solid #111111;
+	border-radius: 5px;
+
+	background-color: white;
+}
+
+#allcontent
+{
+	width: 100%;
+
+	padding: 0px;
+	
+	margin: 0px;
+
+	border: 1px solid black;
+	border-radius: 5px;
+}
+
+#taOutput
+{
+	display: none;
+}
+
+#mycanvas
+{
+	width: 480px;
+	height: 400px; 
+	padding: 0px;
+	margin: 0px;
+	
+}
+
+#controller
+{
+	width: 100%;
+	height: 65px;
+	
+	padding: 0px;
+	margin: 0px;
+	margin-left : auto;
+	margin-right : auto;
+
+	border-radius: 0px 0px 5px 5px;
+}
+
+#inputTable
+{
+	width: 100%;
+	height: 65px;
+	background-color: white;
+	border-collapse: collapse;
+}
+
+#inputPadZ, #inputPadX, #inputPadC, #inputPadV
+{
+	width:110px;
+	height:50px;
+	background-color: red;
+}
+#inputPad1
+{
+	width: 25%;;
+
+	background-color: #0099cc;
+	font-family: 'Share Tech Mono', sans-serif;
+	font-size: 200%;
+	font-width: bold;
+	text-align: center;
+}
+#inputPad2
+{
+	width: 25%;;
+
+	background-color: #9933cc;
+	font-family: 'Share Tech Mono', sans-serif;
+	font-size: 200%;
+	font-width: bold;
+	text-align: center;
+}
+#inputPad3
+{
+	width: 25%;;
+
+	background-color: #669900;
+	font-family: 'Share Tech Mono', sans-serif;
+	font-size: 200%;
+	font-width: bold;
+	text-align: center;
+}
+#inputPad4
+{
+	width: 25%;;
+
+	background-color: #ff8a00;
+	font-family: 'Share Tech Mono', sans-serif;
+	font-size: 200%;
+	font-width: bold;
+	text-align: center;
+}
+
+#output, #submitForm
+{
+	width: 480px;
+	margin: 0px;
+	margin-left: auto;
+	margin-right: auto;
+
+	background-color: white;
+}
+
+#whitebody, .whitebackground
+{
+	background-color: white;
+}
+
+.mainlogo
+{
+	font-family: 'Audiowide', cursive;
+	font-size: 500%;
+}
+
+.menu
+{
+	font-family: 'Audiowide', cursive;
+	font-size: 300%;
+}
+
+#indexmain
+{
+	border: 2px #000000 solid;
+	border-radius: 5px 5px 5px 5px;
+	
+	width: 480px;
+	margin: 0px;
+	margin-left: auto;
+	margin-right: auto;
+
+	margin-top: 20px;
+}
+
+@-webkit-keyframes fromTop
+{
+	0% { margin-top: -200px; }
+	100% { margin-top: 20px; }
+}
+
+@-webkit-keyframes showup
+{
+	0% { opacity: 0; }
+	100% { opacity: 1; }
+}
+
+@-webkit-keyframes blackWhite
+{
+	0% { color: white; box-shadow: 2px 2px 2px black; }
+	50% { color: #bbb; }
+	100% { color: white; box-shadow: 2px 2px 2px black; }
+}
+
+#result_main
+{
+	border: 2px #000000 solid;
+	border-radius: 5px 5px 5px 5px;
+	
+	width: 480px;
+	margin: 0px;
+	margin-left: auto;
+	margin-right: auto;
+
+	margin-top: 20px;
+
+	background-color:black;
+
+	-webkit-animation-name: fromTop;
+	-webkit-animation-duration: 1s;
+}
+
+#main_logo
+{
+	width: 15px;
+	height: 15px;
+}
+
+#main_head
+{
+	border-radius: 5px 5px 0px 0px;
+	border-bottom: solid 2px black;
+
+	/*height: 20px;*/
+	color: white;
+	font-weight: bold;
+	background-color: #aea79f;
+	text-align: center;
+	padding: 5px;
+}
+
+#main_menu
+{
+	width: 100%;
+	margin: 0px;
+}
+
+#main_inner
+{
+	width: 480px;
+	text-align: center;
+	color:black;
+}
+
+th
+{
+	color: black;
+}
+
+td
+{
+	color:black;
+	font-size: 80%;
+}
+
+input
+{
+	border: 1px solid #aaaaaa;
+}
+
+.data_table
+{
+	border: 1px solid #eeeeee;
+	width: 100%;
+}
+
+.fullSizeButton
+{
+	width: 460px;
+	height: 60px;
+	margin: 30px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#lime_table
+{
+	border: 1px #eeeeee solid;
+}
+
+#footer
+{
+	text-align: center;
+	font-size: 70%;
+	color: black;
+	width: 480px;
+	margin: 0px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.result_header
+{
+	font-family: 'Audiowide', cursive;
+	font-size: 200%;
+	color: white;
+	width: 70%;
+}
+
+.result_data
+{
+	font-family: 'Audiowide', cursive;
+	color: white;
+	font-size: 200%;
+	text-align: center;
+
+	-webkit-animation-name: showup;
+	-webkit-animation-duration: 3s;
+}
+
+.result_score_header
+{
+	font-family: 'Audiowide', cursive;
+	font-size: 250%;
+	color: white;
+	width: 70%;
+}
+
+.result_score_data
+{
+	font-family: 'Audiowide', cursive;
+	color: white;
+	font-size: 300%;
+	text-align: center;
+
+	-webkit-animation-name: blackWhite;
+	-webkit-animation-duration: 1s;
+	-webkit-animation-iteration-count: infinite;
+}
+
+.result_additional
+{
+	font-family: 'Audiowide', cursive;
+	color: white;
+	font-size: 200%;
+	text-align: center;
+}
+
+#result_Table
+{
+	width: 100%;
+}
+
+#result_play_again
+{
+	font-family: 'Audiowide', cursive;
+	color: white;
+	font-size: 125%;
+	text-align: right;
+	text-decoration: underline;
+	margin: 20px;
+	margin-top: 100px;
+}
